@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Prime RouteMax & Logistics | shipping goods, Logistics, Car Rentals & Sales, Driver Hiring</title>
+    <!-- Google Fonts + Font Awesome CDN -->
+    <link rel="icon" type="images/png" href="favicon.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fafcff;
+            color: #1a2c3e;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        .social-media a {
+            font-size: 30px;
+            margin: 10px;
+            text-decoration: none;
+
+        }
+
+        .fa-facebook {
+            color: #3b5998;
+        }
+
+        .fa-instagram {
+            color: #e1306c;
+        }
+
+        .fa-twitter {
+            color: #1da1f2;
+        }
+
+        .fa-youtube {
+            color: #ff0000;
+        }
+
+        .fa-whatsapp {
+            color: #25d366;
+        }
+
+
+        /* header & navigation */
+        header {
+            background: #ffffff;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02), 0 2px 6px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(2px);
+            background-color: rgba(255, 255, 255, 0.96);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            flex-wrap: wrap;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #0f2b3d, #1e5f6e);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.3px;
+        }
+
+        .logo span {
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: #4a627a;
+            display: block;
+            letter-spacing: 0.3px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #1f3b4c;
+            transition: 0.2s;
+            font-size: 1rem;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #1e88a8;
+            border-bottom: 2px solid #1e88a8;
+            padding-bottom: 4px;
+        }
+
+        /* buttons */
+        .btn {
+            display: inline-block;
+            background: #1e5f6e;
+            color: white;
+            padding: 0.75rem 1.6rem;
+            border-radius: 40px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1.5px solid #1e5f6e;
+            color: #1e5f6e;
+        }
+
+        .btn-outline:hover {
+            background: #1e5f6e;
+            color: white;
+        }
+
+        .btn:hover {
+            background: #0f4653;
+            transform: translateY(-2px);
+        }
+
+        /* hero section */
+        .hero {
+            padding: 4rem 0 3rem 0;
+            background: linear-gradient(135deg, #FF8C 0%, #ffd700 100%);
+        }
+
+        .hero-grid {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+            justify-content: space-between;
+        }
+
+        .hero-content {
+            flex: 1.2;
+        }
+
+        .hero-content h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #0b2b38;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: #2c4b62;
+            margin-bottom: 2rem;
+            max-width: 550px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .stat h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #1e5f6e;
+        }
+
+        .hero-image {
+            flex: 0.9;
+            text-align: center;
+        }
+
+        .hero-image i {
+            font-size: 12rem;
+            color: #cbdde6;
+        }
+
+        /* section headers */
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0f2b3d;
+        }
+
+        .section-header p {
+            color: #4f6f8a;
+            max-width: 600px;
+            margin: 0.7rem auto 0;
+        }
+
+        /* services grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 32px;
+            padding: 1.8rem;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.03), 0 5px 12px rgba(0, 0, 0, 0.05);
+            transition: 0.25s ease;
+            border: 1px solid #e9f0f3;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            border-color: #cae3ec;
+            box-shadow: 0 25px 40px rgba(30, 95, 110, 0.08);
+        }
+
+        .service-icon {
+            font-size: 2.8rem;
+            color: #1e88a8;
+            margin-bottom: 1.2rem;
+        }
+
+        .service-card h4 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .service-card p {
+            color: #3b5c74;
+            margin-bottom: 1.2rem;
+        }
+
+        .badge-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 1rem;
+        }
+
+        .badge {
+            background: #eef3f7;
+            padding: 4px 12px;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #1e5f6e;
+        }
+
+        /* property listing cards (special) */
+        .property-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .property-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            transition: 0.2s;
+            border: 1px solid #e2edf2;
+        }
+
+        .property-img {
+            height: 160px;
+            background: #d4e3ea;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #1a4e5e;
+        }
+
+        .property-info {
+            padding: 1.2rem;
+        }
+
+        .property-title {
+            font-weight: 800;
+            font-size: 1.2rem;
+        }
+
+        .property-detail {
+            font-size: 0.85rem;
+            color: #3f6b80;
+            margin: 0.5rem 0;
+        }
+
+        .price {
+            font-weight: 800;
+            color: #1e5f6e;
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #c0e0e9;
+            border-radius: 30px;
+            padding: 0.2rem 0.8rem;
+            font-size: 0.7rem;
+            font-weight: 700;
+            margin-right: 6px;
+        }
+
+        /* logistics + car rentals & + driver hiring */
+        .special-offer {
+            background: #eef4f7;
+            border-radius: 40px;
+            padding: 2rem;
+            margin: 3rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .offer-text h4 {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        /* car rentals section */
+        .car-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .car-item {
+            background: white;
+            border-radius: 28px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.2s;
+            border: 1px solid #e2edf2;
+        }
+
+        .car-item i {
+            font-size: 3rem;
+            color: #1e88a8;
+        }
+
+        .car-item h5 {
+            font-size: 1.3rem;
+            margin: 1rem 0 0.3rem;
+        }
+
+        .rent-price {
+            font-weight: 800;
+            color: #0f2b3d;
+            margin-top: 0.5rem;
+        }
+
+        /* contact / cta */
+        .contact-section {
+            background: #122b36;
+            color: white;
+            border-radius: 48px;
+            padding: 3rem 2rem;
+            margin: 4rem 0;
+            text-align: center;
+        }
+
+        .contact-section h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-section .btn-light {
+            background: #f9c74f;
+            color: #122b36;
+            margin-top: 1rem;
+            border: none;
+        }
+
+        .contact-section .btn-light:hover {
+            background: #f9b81b;
+        }
+
+        footer {
+            background: #0b2029;
+            color: #b8d0dc;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer-flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .footer-col p,
+        .footer-col i {
+            margin: 0.3rem 0;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            border-top: 1px solid #1e4351;
+            padding-top: 1.5rem;
+        }
+
+        @media (max-width: 780px) {
+            .navbar {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero-content h2 {
+                font-size: 2.2rem;
+            }
+
+            .hero-grid {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+<style id="premium-motion-upgrade">
+/* ===== PRIME ROUTEMAX PREMIUM MOTION SYSTEM ===== */
+:root{
+  --prm-primary:#1e88a8;
+  --prm-deep:#082b36;
+  --prm-gold:#f9c74f;
+  --prm-glow:rgba(30,136,168,.28);
+}
+
+html{scroll-behavior:smooth}
+body{
+  overflow-x:hidden;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(30,136,168,.07), transparent 28%),
+    radial-gradient(circle at 90% 20%, rgba(249,199,79,.08), transparent 24%),
+    #fafcff;
+}
+
+/* Animated ambient background */
+body::before{
+  content:"";
+  position:fixed;
+  inset:-30%;
+  z-index:-2;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(30,136,168,.08), transparent 18%),
+    radial-gradient(circle at 75% 65%, rgba(249,199,79,.07), transparent 20%);
+  filter:blur(35px);
+  animation:prmAmbient 14s ease-in-out infinite alternate;
+}
+@keyframes prmAmbient{
+  0%{transform:translate3d(-2%,-1%,0) scale(1)}
+  100%{transform:translate3d(3%,2%,0) scale(1.08)}
+}
+
+/* Premium sticky glass navigation */
+header{
+  background:rgba(255,255,255,.78)!important;
+  border-bottom:1px solid rgba(30,136,168,.10);
+  box-shadow:0 10px 35px rgba(8,43,54,.08)!important;
+  backdrop-filter:blur(18px)!important;
+  -webkit-backdrop-filter:blur(18px);
+  transition:all .35s ease;
+}
+header.scrolled{
+  background:rgba(255,255,255,.92)!important;
+  box-shadow:0 14px 40px rgba(8,43,54,.14)!important;
+}
+.nav-links a{
+  position:relative;
+  border-bottom:0!important;
+  padding-bottom:8px!important;
+}
+.nav-links a::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:0;
+  width:0;
+  height:2px;
+  border-radius:10px;
+  background:linear-gradient(90deg,var(--prm-primary),var(--prm-gold));
+  transform:translateX(-50%);
+  transition:width .3s ease;
+}
+.nav-links a:hover::after,
+.nav-links a.active::after{width:100%}
+
+/* Hero entrance + floating visual */
+.hero{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(255,255,255,.48), transparent 25%),
+    linear-gradient(135deg,#fff4bd 0%,#ffd95a 48%,#f9c74f 100%)!important;
+}
+.hero::before,.hero::after{
+  content:"";
+  position:absolute;
+  border-radius:50%;
+  pointer-events:none;
+  filter:blur(2px);
+}
+.hero::before{
+  width:280px;height:280px;
+  right:-90px;top:-110px;
+  background:rgba(255,255,255,.24);
+  animation:prmFloat 7s ease-in-out infinite;
+}
+.hero::after{
+  width:170px;height:170px;
+  left:-70px;bottom:-80px;
+  background:rgba(30,136,168,.10);
+  animation:prmFloat 9s ease-in-out infinite reverse;
+}
+.hero-content{animation:prmReveal .9s cubic-bezier(.2,.8,.2,1) both}
+.hero-image{
+  animation:prmHeroImage 1.05s cubic-bezier(.2,.8,.2,1) .15s both;
+}
+.hero-image img{
+  transition:transform .7s cubic-bezier(.2,.8,.2,1),filter .5s ease;
+}
+.hero-image:hover img{
+  transform:perspective(900px) rotateY(-3deg) rotateX(2deg) scale(1.025);
+  filter:saturate(1.08);
+}
+@keyframes prmReveal{
+  from{opacity:0;transform:translateY(28px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes prmHeroImage{
+  from{opacity:0;transform:translateX(45px) scale(.94)}
+  to{opacity:1;transform:translateX(0) scale(1)}
+}
+@keyframes prmFloat{
+  0%,100%{transform:translate3d(0,0,0)}
+  50%{transform:translate3d(0,-18px,0)}
+}
+
+/* Buttons: magnetic-looking glow */
+.btn{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  box-shadow:0 8px 22px rgba(30,95,110,.14)!important;
+  transition:transform .3s ease,box-shadow .3s ease,background .3s ease!important;
+}
+.btn::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  z-index:-1;
+  background:linear-gradient(110deg,transparent 20%,rgba(255,255,255,.38) 48%,transparent 72%);
+  transform:translateX(-120%);
+  transition:transform .65s ease;
+}
+.btn:hover::before{transform:translateX(120%)}
+.btn:hover{
+  transform:translateY(-4px) scale(1.015)!important;
+  box-shadow:0 15px 30px rgba(30,95,110,.24)!important;
+}
+.btn:active{transform:translateY(-1px) scale(.98)!important}
+
+/* Cards: lift + animated border */
+.service-card,.property-card,.car-item{
+  position:relative;
+  overflow:hidden;
+  transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s ease,border-color .45s ease!important;
+}
+.service-card::before,.property-card::before,.car-item::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(120deg,transparent 25%,rgba(255,255,255,.6) 50%,transparent 75%);
+  transform:translateX(-120%);
+  transition:transform .8s ease;
+}
+.service-card:hover::before,.property-card:hover::before,.car-item:hover::before{
+  transform:translateX(120%);
+}
+.service-card:hover,.property-card:hover,.car-item:hover{
+  transform:translateY(-10px);
+  box-shadow:0 25px 55px rgba(8,43,54,.14)!important;
+  border-color:rgba(30,136,168,.25)!important;
+}
+.service-icon,.car-item i{
+  transition:transform .4s ease,color .4s ease;
+}
+.service-card:hover .service-icon,.car-item:hover i{
+  transform:translateY(-5px) scale(1.1);
+  color:var(--prm-primary);
+}
+
+/* Image zoom */
+.property-img{overflow:hidden!important}
+.property-img img{
+  transition:transform .7s cubic-bezier(.2,.8,.2,1),filter .5s ease!important;
+}
+.property-card:hover .property-img img{
+  transform:scale(1.09);
+  filter:saturate(1.08) contrast(1.03);
+}
+
+/* Section headers */
+.section-header h3{
+  position:relative;
+  display:inline-block;
+}
+.section-header h3::after{
+  content:"";
+  display:block;
+  width:48px;
+  height:3px;
+  margin:10px auto 0;
+  border-radius:10px;
+  background:linear-gradient(90deg,var(--prm-primary),var(--prm-gold));
+  animation:prmLine 2.5s ease-in-out infinite alternate;
+}
+@keyframes prmLine{
+  from{width:35px}
+  to{width:85px}
+}
+
+/* Scroll reveal classes */
+.prm-reveal{
+  opacity:0;
+  transform:translateY(35px);
+  transition:opacity .75s ease,transform .75s cubic-bezier(.2,.8,.2,1);
+}
+.prm-reveal.prm-visible{
+  opacity:1;
+  transform:none;
+}
+.prm-delay-1{transition-delay:.08s}
+.prm-delay-2{transition-delay:.16s}
+.prm-delay-3{transition-delay:.24s}
+.prm-delay-4{transition-delay:.32s}
+
+/* Contact section */
+.contact-section{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 15% 20%,rgba(30,136,168,.18),transparent 25%),
+    radial-gradient(circle at 85% 80%,rgba(249,199,79,.12),transparent 24%),
+    #122b36!important;
+  box-shadow:0 25px 70px rgba(8,43,54,.18);
+}
+.contact-section::before{
+  content:"";
+  position:absolute;
+  width:260px;height:260px;
+  right:-100px;top:-100px;
+  border:1px solid rgba(255,255,255,.13);
+  border-radius:50%;
+  animation:prmSpin 18s linear infinite;
+}
+@keyframes prmSpin{to{transform:rotate(360deg)}}
+
+/* Inputs */
+.contact-section input,.contact-section select,.contact-section textarea{
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease!important;
+}
+.contact-section input:focus,.contact-section select:focus,.contact-section textarea:focus{
+  transform:translateY(-2px);
+  box-shadow:0 0 0 3px rgba(249,199,79,.22),0 10px 25px rgba(0,0,0,.12)!important;
+}
+
+/* Social icons */
+.social-media a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:48px;height:48px;
+  border-radius:50%;
+  background:#fff;
+  box-shadow:0 8px 20px rgba(8,43,54,.10);
+  transition:transform .35s ease,box-shadow .35s ease;
+}
+.social-media a:hover{
+  transform:translateY(-7px) rotate(4deg);
+  box-shadow:0 15px 30px rgba(8,43,54,.18);
+}
+
+/* Footer links */
+footer a{transition:color .25s ease,transform .25s ease}
+footer a:hover{color:#f9c74f!important}
+
+/* Floating back-to-top button */
+#prmTop{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  width:48px;height:48px;
+  border:0;border-radius:50%;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--prm-primary),var(--prm-deep));
+  color:#fff;
+  cursor:pointer;
+  z-index:999;
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(15px);
+  transition:.3s ease;
+  box-shadow:0 12px 28px rgba(8,43,54,.25);
+}
+#prmTop.show{opacity:1;visibility:visible;transform:none}
+#prmTop:hover{transform:translateY(-5px);box-shadow:0 18px 35px rgba(8,43,54,.3)}
+
+/* Loading shimmer */
+.prm-loading{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  display:grid;
+  place-items:center;
+  background:#081f28;
+  transition:opacity .65s ease,visibility .65s ease;
+}
+.prm-loading.hide{opacity:0;visibility:hidden}
+.prm-loader{
+  width:54px;height:54px;
+  border:3px solid rgba(255,255,255,.15);
+  border-top-color:#f9c74f;
+  border-right-color:#1e88a8;
+  border-radius:50%;
+  animation:prmLoader 1s linear infinite;
+}
+@keyframes prmLoader{to{transform:rotate(360deg)}}
+
+/* Respect accessibility preferences */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    scroll-behavior:auto!important;
+    transition-duration:.01ms!important;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo" style="display: flex; align-items: center; gap: 15px;">
+                    <img src="images/logo.png" alt="company Logo"
+                        style="height: 80px; width: auto; border-radius: 12px;">
+
+
+                </div>
+                <div>
+                    <h1
+                        style="font-size: 1.6rem; font-weight: 800; background: linear-gradient(135deg, #0f2b3d, #1e5f6e); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; margin: 0;">
+                        Prime RouteMax & Logistics</h1>
+                    <span style="font-size: 0.7rem; color: #4a627a;">property • logistics • mobility </span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#goods-shipping">Goods Shipping</a></li>
+                    <li><a href="#Driver-Hiring">Driver Hiring</a></li>
+                    <li><a href="#logistics">Logistics</a></li>
+                    <li><a href="#car-rental">Car Rentals & Sales</a></li>
+                    <li><a href="#parking-lot">Parking Lot</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <a href="#contact" class="btn">Drop a Message</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero section -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <h2>SIMPLIFY ASSETS,<br>MOBILITY &amp; DRIVER HIRING</h2>
+                    <p>One trusted platform for property (sale, rent, buy), logistics, goods shipping, driver hiring,
+                        and car
+                        rentals —
+                        seamless end-to-end service.</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <h3>100+</h3>
+                            <p>Properties</p>
+                        </div>
+                        <div class="stat">
+                            <h3>300+</h3>
+                            <p>Vehicles rented</p>
+                        </div>
+                        <div class="stat">
+                            <h3>24/7</h3>
+                            <p>Logistics support</p>
+                        </div>
+                    </div>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="#property" class="btn">Explore properties →</a>
+                        <a href="#car-rental" class="btn btn-outline" style="margin-left: 1rem;">Rent a car</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/a.jpg" alt="pinnacle nexus services"
+                        style="width: 100%; border-radius: 28px; box-shadow: 0 25px 45px rgba(0,0,0,0.25); transition: transform 0.3s ease;">
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Main services overview (combined) -->
+        <div class="container" id="services">
+            <div class="section-header">
+                <h3>What we deliver</h3>
+                <p>Integrated solutions — from goods shipping, car rentals & sales, and driver hiring and beyond</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-home"></i></div>
+                    <h4>Property (Sale/Rent/Lease)</h4>
+                    <p>Residential, commercial & industrial confort. Flexible terms, competitive sale prices, and
+                        end-to-end
+                        documentation support.</p>
+                    <div class="badge-list"><span class="badge">For sale</span><span class="badge">Long
+                            lease</span><span class="badge">Rent to own</span></div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-shipping-fast"></i></div>
+                    <h4>Logistics & Goods Shipping</h4>
+                    <p>Global freight, last-mile delivery, warehousing, and strategic goods management. We source raw
+                        materials &
+                        finished goods with speed.</p>
+                    <div class="badge-list"><span class="badge">Air freight</span><span class="badge">Sea
+                            cargo</span><span class="badge">Supply chain</span></div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-print"></i></div>
+                    <h4>Driver Hiring</h4>
+                    <p>Professional, reliable drivers for hire. Background checks, training, and safety protocols.</p>
+                    <div class="badge-list"><span class="badge">Local drivers</span><span
+                            class="badge">Long-distance</span><span class="badge">Specialized transport</span></div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-car"></i></div>
+                    <h4>Car Rentals & Sales</h4>
+                    <p>Luxury, economy, SUVs & vans. Daily / weekly / monthly rentals with insurance & 24/7 roadside
+                        assistance.
+                    </p>
+                    <div class="badge-list"><span class="badge">Self-drive</span><span
+                            class="badge">Chauffeur</span><span class="badge">Airport pickup</span></div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-parking"></i></div>
+                    <h4>Parking Lot Services</h4>
+                    <p>Convenient vehicle parking for customers, visitors, and rental vehicles, with clear parking
+                        arrangements and support for short-term or extended stays.</p>
+                    <div class="badge-list"><span class="badge">Short-term</span><span class="badge">Long-term</span><span class="badge">Vehicle parking</span></div>
+                    <a href="#parking-lot" class="btn" style="margin-top: 1rem;">View parking options</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Property section: Sale, Rent, Lease (featured listings) -->
+        <div class="container" id="goods-shipping">
+            <div class="section-header">
+                <h3>🏡 Goods Shipping</h3>
+                <p>For international and home shipping — find your next space with us</p>
+            </div>
+            <div class="property-row">
+                <div class="property-card">
+                    <div class="property-img" style="position: relative;">
+                        <img src="images/conste.png" alt="main view"
+                            style="width: 100%; height: 100%; object-fit: cover; " id="mainImg1">
+                        <div
+                            style="position:absolute ; bottom: 10px; right: 10px; background: rgba(0, 0, 0, 0.7); padding: 5px 10px; border-radius: 20px; font-size: 12px; color: white;">
+
+                        </div>
+                    </div>
+                    <div class="property-info">
+                        <div class="property-title">Cargo Shipping for a Client</div>
+                        <div class="property-detail">
+                        </div>
+                        <div>Goods are transported by cargo ships and containers.</div>
+
+                    </div>
+                </div>
+                <div class="property-card">
+                    <div class="property-img" style="position: relative;">
+                        <img src="images/sione.jpg" alt="main view"
+                            style="width: 100%; height: 100%; object-fit: cover; " id="mainImg1">
+                        <div
+                            style="position:absolute ; bottom: 10px; right: 10px; background: rgba(0, 0, 0, 0.7); padding: 5px 10px; border-radius: 20px; font-size: 12px; color: white;">
+
+                        </div>
+                    </div>
+                    <div class="property-info">
+                        <div class="property-title">Air Shipping</div>
+                        <div class="property-detail">
+                        </div>
+                        <div>Goods are transported by airplanes.</div>
+
+                    </div>
+                </div>
+                <div class="property-card">
+                    <div class="property-img" style="position: relative;">
+                        <img src="images/road.jpg" alt="main view"
+                            style="width: 100%; height: 100%; object-fit: cover; " id="mainImg1">
+                        <div
+                            style="position:absolute ; bottom: 10px; right: 10px; background: rgba(0, 0, 0, 0.7); padding: 5px 10px; border-radius: 20px; font-size: 12px; color: white;">
+
+                        </div>
+                    </div>
+                    <div class="property-info">
+                        <div class="property-title">Road Shipping</div>
+                        <div class="property-detail">
+                        </div>
+                        <div>Goods are transported by trucks and cars.</div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- dedicated cargo shipping services block -->
+            <div class="container">
+                <div style="background: #fef8e7; border-radius: 32px; padding: 2rem; margin: 1rem 0 2rem;">
+                    <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
+                        <div style="flex: 1;">
+                            <h4 style="font-size: 1.7rem;"><i class="fas fa-truck"></i> Moving Business Forward with
+                                Reliable &
+                                Solutions
+                            </h4>
+                            <p>Prime RouteMax Logistics is a trusted logistics and transportation company committed to
+                                delivering efficient, reliable, and cost-effective
+                                supply chain solutions.
+                                We specialize in the safe movement of goods across local, regional, and international
+                                markets, helping businesses
+                                connect with customers and partners seamlessly.
+
+                                Our mission is to simplify logistics
+                                through innovative transportation strategies,
+                                professional service, and a customer-first approach.
+                                By combining industry expertise, modern technology, and a dedicated team,
+                                we ensure that every shipment reaches its destination safely, on time, and within
+                                budget.
+                            </p>
+                            <ul style="margin-top: 1rem; list-style:none;">
+                                <li> <i class="fas fa-check-circle" style="color: #1e5f6e;"></i> Import
+                                    and
+                                    Export
+                                    Logistics.
+                                </li>
+                                <li> <i class="fas fa-check-circle" style="color: #1e5f6e;"></i> Customs
+                                    Clearance
+                                    Support.
+                                </li>
+                                <li> <i class="fas fa-check-circle" style="color: #1e5f6e;"></i>
+                                    Cargo
+                                    Handling
+                                    and
+                                    Distribution.
+                                </li>
+                                <li> <i class="fas fa-check-circle" style="color: #1e5f6e;"></i> Container
+                                    and Bulk
+                                    Cargo
+                                    hipping.
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div style="flex: 1;">
+                            <img src="images/closee.jpg" alt="Property Samples"
+                                style="width: 100%; border-radius: 24px; box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);">
+                            <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+                                <img src="images/caron.jpg" alt="Sample 1" style="width: 33%; border-radius: 12px;">
+                                <img src="images/zede.jpg" alt="Sample 2" style="width: 33%; border-radius: 12px;">
+                                <img src="images/kape.jpg" alt="Sample 3" style="width: 33%; border-radius: 12px;">
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <!-- Driver hiring section -->
+            <div class="container" id="Driver-Hiring">
+                <div class="section-header">
+                    <h3>🚘 Driver Hiring – Professional drivers at your service</h3>
+                    <p>Hire experienced drivers for personal, business, or logistics needs. Flexible terms and
+                        competitive rates.
+                    </p>
+                </div>
+                <div class="car-grid">
+                    <div class="car-item">
+                        <i class="fas fa-user-tie"></i>
+                        <h5>Professional Drivers</h5>
+                        <p>Experienced · Licensed · Background checked</p>
+                    </div>
+                    <div class="car-item">
+                        <i class="fas fa-clock"></i>
+                        <h5>Flexible Scheduling</h5>
+                        <p>Hourly · Daily · Weekly · Long-term</p>
+                    </div>
+                    <div class="car-item">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h5>Local & Regional</h5>
+                        <p>Freetown · Nationwide · Cross-border</p>
+                    </div>
+                    <div class="car-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h5>Safety & Support</h5>
+                        <p>Insurance included · 24/7 assistance</p>
+                    </div>
+                </div>
+                <div style="text-align: center; margin: 1rem 0 2rem;">
+                    <a href="#contact" class="btn" style="margin-top: 1rem;">Request a driver</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Logistics section -->
+        <div class="container" id="logistics">
+            <div class="section-header">
+                <h3>📦 Logistics – Streamlined supply chain solutions</h3>
+                <p>End-to-end logistics services for businesses and individuals. Warehousing, distribution, and
+                    transportation
+                    management.
+                </p>
+            </div>
+            <div class="car-grid">
+                <div class="car-item">
+                    <i class="fas fa-warehouse"></i>
+                    <h5>Warehousing</h5>
+                    <p>Secure storage · Inventory management</p>
+                </div>
+                <div class="car-item">
+                    <i class="fas fa-truck"></i>
+                    <h5>Transportation</h5>
+                    <p>Local & regional delivery · Fleet management</p>
+                </div>
+                <div class="car-item">
+                    <i class="fas fa-boxes"></i>
+                    <h5>Distribution</h5>
+                    <p>Order fulfillment · Last-mile delivery</p>
+                </div>
+                <div class="car-item">
+                    <i class="fas fa-cogs"></i>
+                    <h5>Supply Chain Management</h5>
+                    <p>Process optimization · Cost reduction</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin: 1rem 0 2rem;">
+                <a href="#contact" class="btn" style="margin-top: 1rem;">Request logistics support</a>
+            </div>
+        </div>
+        </div>
+
+
+
+        <!-- Car Rentals detailed section -->
+        <div class="container" id="car-rental">
+            <div class="section-header">
+                <h3>🚗 Car Rentals – Drive with confidence</h3>
+                <p>Economy, luxury, SUV, minivans. Daily / weekly / long-term lease. Insurance & support
+                    included.
+                </p>
+            </div>
+            <div class="car-grid">
+                <div class="car-item">
+                    <i class="fas fa-car-side"></i>
+                    <h5>Toyota Corolla / Civic</h5>
+                    <p>Economy · 4 seats · A/C</p>
+                </div>
+                <div class="car-item">
+                    <i class="fas fa-caravan"></i>
+                    <h5>Hyundai Tucson / RAV4</h5>
+                    <p>SUV · 5 seats · GPS ready</p>
+                </div>
+                <div class="car-item">
+                    <i class="fas fa-truck-pickup"></i>
+                    <h5>Ford Transit Van</h5>
+                    <p>Cargo/Large groups · 8 seats</p>
+                </div>
+                <div class="car-item">
+                    <i class="fas fa-gem"></i>
+                    <h5>Mercedes E-Class</h5>
+                    <p>Luxury · Business class</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin: 1rem 0 2rem;">
+                <p><i class="fas fa-calendar-check"></i> Long-term lease available from 1 month –
+                    it depend how you use it.</p>
+                <a href="#contact" class="btn" style="margin-top: 1rem;">Request a rental</a>
+            </div>
+        </div>
+
+
+        <!-- Parking Lot section -->
+        <section class="container" id="parking-lot" style="padding-top: 2rem;">
+            <div class="section-header">
+                <h3><i class="fas fa-parking"></i> Parking Lot Services</h3>
+                <p>Practical parking options for customers, visitors, and vehicles in our rental and logistics fleet.
+                   Contact our team to confirm availability, location, and parking rates.</p>
+            </div>
+            <div class="car-grid">
+                <div class="car-item">
+                    <i class="fas fa-car"></i>
+                    <h5>Short-Term Parking</h5>
+                    <p>Convenient parking for quick visits, pickups, drop-offs, and short stays.</p>
+                    <div class="rent-price">Hourly / Daily</div>
+                </div>
+                <div class="car-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h5>Long-Term Parking</h5>
+                    <p>Parking arrangements for customers or vehicles that need to stay for an extended period.</p>
+                    <div class="rent-price">Weekly / Monthly</div>
+                </div>
+                <div class="car-item">
+                    <i class="fas fa-truck"></i>
+                    <h5>Fleet & Logistics Parking</h5>
+                    <p>Parking coordination for cars, vans, and business vehicles used for transport and delivery.</p>
+                    <div class="rent-price">By arrangement</div>
+                </div>
+                <div class="car-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h5>Parking Assistance</h5>
+                    <p>Contact us to discuss access, parking duration, vehicle type, and any special requirements.</p>
+                    <div class="rent-price">Ask our team</div>
+                </div>
+            </div>
+            <div style="text-align: center; margin: 1rem 0 3rem;">
+                <p><strong>Please note:</strong> Parking availability, security arrangements, and prices must be
+                   confirmed with Prime RouteMax before arrival.</p>
+                <a href="#contact" class="btn" style="margin-top: 1rem;">Enquire About Parking</a>
+            </div>
+        </section>
+
+        <!-- Combined section: why choose us + contact area -->
+        <div class="container" id="contact">
+            <div class="contact-section">
+                <h3>Ready to streamline?</h3>
+                <p>Get in touch for property viewings, logistics quotes, driver hiring, shipping, or car
+                    rental
+                    bookings.<br>Our
+                    team
+                    replies within 2 hours.</p>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin: 2rem 0;">
+                    <div><i class="fas fa-phone-alt"></i> 076798954</div>
+                    <div><i class="fas fa-envelope"></i> christiandumbuya53@gmail.com</div>
+                    <div><i class="fas fa-clock"></i> 24/7 support</div>
+                </div>
+                <form action="https://formspree.io/f/mvzepqlp" method="POST"
+                    style="max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem;">
+                    <input type="text" name="name" class="form-control" placeholder="Full Name" required
+                        style="padding: 12px; border-radius: 60px; border: none; outline: none; font-size: 1rem; padding-left: 1.2rem;">
+                    <input type="email" name="email" class="form-control" placeholder="Email Address" required
+                        style="padding: 12px; border-radius: 60px; border: none; outline: none; font-size: 1rem; padding-left: 1.2rem;">
+                    <input type="tel" name="phone" class="form-control" placeholder="Phone Number (optional)"
+                        style="padding: 12px; border-radius: 60px; border: none; outline: none; font-size: 1rem; padding-left: 1.2rem;">
+                    <select name="service" class="form-control" required
+                        style="padding: 12px; border-radius: 60px; border: none; background: white; font-size: 1rem;">
+                        <option value="">Select Shipping Service</option>
+                        <option>Air Freight</option>
+                        <option>Sea Freight</option>
+                        <option>Road Transport</option>
+                        <option>Warehousing</option>
+                        <option>Customs Clearance</option>
+                        <option>Door-to-Door Delivery</option>
+                        <option>Parking Lot Services</option>
+                    </select>
+
+                    <textarea name="message" class="form-control" rows="6" placeholder="Tell us about your shipment..."
+                        required></textarea>
+
+                    <!-- Optional subject -->
+                    <input type="hidden" name="_subject" value="New Inquiry from Prime RouteMax Website">
+                    <button type="submit" class="btn btn-primary"
+                        style="background: #f9c74f; color:#122b36; font-weight: bold; padding: 12px; border-radius: 60px; cursor: pointer;">
+                        Send Message
+                    </button>
+                </form>
+
+                <div style="margin: 3rem auto 2rem auto; max-width: 1200px;">
+                    <div
+                        style="background: white ; border-radius: 32px; padding: 1.5rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);">
+                        <div style="text-align: center; margin-bottom: 1.5rem; ">
+                            <h4 style="font-size: 1.5rem; color: #0f2b3d;">
+                                <i class="fas fa-map-marker-alt" style="color: #1e5f6e;"></i> Find Us
+                                Here
+
+                            </h4>
+                            <p>9 Bathurst Regent, Freetown, Sierra Leone.</p>
+                        </div>
+                        <div style="border-radius: 24px; overflow: hidden; box-shadow:0 5px 15px rgba(0, 0, 0, 0.1) ;">
+
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.1406612342084!2d-13.2395703250651!3d8.48570129725686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf04c3a4a2446d65%3A0xc814e190cc18ee8b!2sLiverpool%20St%2C%20Freetown!5e0!3m2!1sen!2ssl!4v1779650491175!5m2!1sen!2ssl"
+                                width="100%" height="400" style="border: 0;" allowfullscreen="" loading="lazy">
+
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="social-media" style="text-align: center; margin: 2rem 0;">
+        <a href="https://www.facebook.com/PrimeRouteMax" target="_blank" style="margin: 0 0.5rem;"><i
+                class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/PrimeRouteMax/" target="_blank" style="margin: 0 0.5rem;"><i
+                class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/PrimeRouteMax/" target="_blank" style="margin: 0 0.5rem;"><i
+                class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.youtube.com/@PrimeRouteMax" target="_blank" style="margin: 0 0.5rem;"><i
+                class="fab fa-youtube"></i></a>
+        <a href="https://www.whatsapp.com/send?phone=+23276798954" target="_blank" style="margin: 0 0.5rem;"><i
+                class="fab fa-whatsapp"></i></a>
+
+    </div>
+    </div>
+
+    <footer>
+        <div class="container footer-flex">
+            <div class="footer-col">
+                <h4>Prime RouteMax & LOGISTICS</h4>
+                <p><i class="fas fa-building"></i> Properties, logistics, car rental & sales, goods shipping
+                    services.
+                </p>
+                <p><i class="fas fa-map-pin"></i> 9 Bathurst R, Freetown.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick links</h4>
+                <p><a href="#property" style="color:#b8d0dc; text-decoration: none;">Goods Shipping</a></p>
+                <p><a href="#logistics" style="color:#b8d0dc; text-decoration: none;">Logistics & Driver
+                        Services</a>
+                </p>
+                <p><a href="#car-rental" style="color:#b8d0dc; text-decoration: none;">Car rentals/sale</a></p>
+            </div>
+            <div class="footer-col">
+                <h4>Legal & Support</h4>
+                <p>Privacy Policy | Terms of Service<br>© 2026 Prime RouteMax & LOGISTICS COMPANY</p>
+            </div>
+        </div>
+        <div class="container copyright">
+            <p><i class="fas fa-globe"></i> goods shipping, logistics, driver services, car rentals— one
+                destination.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple interactive form handling, displays a custom alert style message with no page reload
+        const form = document.getElementById('quickContact');
+        const feedback = document.getElementById('formFeedback');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('contactName').value.trim();
+            const email = document.getElementById('contactEmail').value.trim();
+            const service = document.getElementById('serviceInterest').value;
+
+            if (!name || !email) {
+                feedback.innerText = '❌ Please fill in your name and email address.';
+                feedback.style.color = "#ffd966";
+                return;
+            }
+            if (!email.includes('@') || !email.includes('.')) {
+                feedback.innerText = '❌ Please enter a valid email address.';
+                return;
+            }
+            // simulate sending request
+            feedback.innerText = `✅ Thanks ${name}! We’ll reach out about ${service} within 2 hours.`;
+            feedback.style.color = "#c3e6cb";
+            form.reset();
+            setTimeout(() => {
+                feedback.innerText = '';
+            }, 5000);
+        });
+    </script>
+
+<!-- ===== PRIME ROUTEMAX PREMIUM INTERACTIONS ===== -->
+<div class="prm-loading" id="prmLoading" aria-hidden="true">
+  <div class="prm-loader"></div>
+</div>
+<button id="prmTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+<script>
+(() => {
+  const onReady = (fn) => document.readyState === 'loading'
+    ? document.addEventListener('DOMContentLoaded', fn)
+    : fn();
+
+  onReady(() => {
+    /* Page loader */
+    const loader = document.getElementById('prmLoading');
+    window.addEventListener('load', () => {
+      setTimeout(() => loader && loader.classList.add('hide'), 350);
+    });
+
+    /* Header scroll state */
+    const header = document.querySelector('header');
+    const topBtn = document.getElementById('prmTop');
+    const updateScroll = () => {
+      const y = window.scrollY;
+      header?.classList.toggle('scrolled', y > 20);
+      topBtn?.classList.toggle('show', y > 500);
+    };
+    updateScroll();
+    window.addEventListener('scroll', updateScroll, {passive:true});
+
+    topBtn?.addEventListener('click', () => {
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+
+    /* Reveal major content blocks as they enter the viewport */
+    const targets = document.querySelectorAll(
+      '.section-header, .service-card, .property-card, .car-item, .special-offer, .contact-section, footer .footer-col'
+    );
+    targets.forEach((el, i) => {
+      el.classList.add('prm-reveal');
+      el.classList.add('prm-delay-' + ((i % 4) + 1));
+    });
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('prm-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+
+    targets.forEach(el => observer.observe(el));
+
+    /* Smooth navigation with sticky-header offset */
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', e => {
+        const id = link.getAttribute('href');
+        if (!id || id === '#') return;
+        const target = document.querySelector(id);
+        if (!target) return;
+        e.preventDefault();
+        const offset = (header?.offsetHeight || 80) + 15;
+        const y = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({top:y, behavior:'smooth'});
+      });
+    });
+
+    /* Active navigation highlight */
+    const sections = [...document.querySelectorAll('main [id]')].filter(el =>
+      document.querySelector(`.nav-links a[href="#${el.id}"]`)
+    );
+    const navObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+          document.querySelector(`.nav-links a[href="#${entry.target.id}"]`)?.classList.add('active');
+        }
+      });
+    }, {rootMargin:'-35% 0px -55% 0px', threshold:0});
+    sections.forEach(s => navObserver.observe(s));
+
+    /* Gentle pointer tilt for cards on desktop */
+    const finePointer = matchMedia('(pointer:fine)').matches;
+    if (finePointer) {
+      document.querySelectorAll('.service-card, .property-card, .car-item').forEach(card => {
+        card.addEventListener('pointermove', e => {
+          const r = card.getBoundingClientRect();
+          const x = (e.clientX - r.left) / r.width - .5;
+          const y = (e.clientY - r.top) / r.height - .5;
+          card.style.transform =
+            `perspective(900px) rotateX(${(-y*2.2).toFixed(2)}deg) rotateY(${(x*2.2).toFixed(2)}deg) translateY(-8px)`;
+        });
+        card.addEventListener('pointerleave', () => {
+          card.style.transform = '';
+        });
+      });
+    }
+
+    /* Count-up hero statistics */
+    const stats = document.querySelectorAll('.hero-stats .stat h3');
+    const parseValue = text => {
+      const match = text.replace(/,/g,'').match(/(\d+(?:\.\d+)?)(.*)/);
+      return match ? {num:parseFloat(match[1]), suffix:match[2]} : null;
+    };
+    const statObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const parsed = parseValue(el.textContent.trim());
+        if (!parsed || el.dataset.counted) return;
+        el.dataset.counted = 'true';
+        const start = performance.now(), duration = 1200;
+        const tick = now => {
+          const p = Math.min((now-start)/duration, 1);
+          const eased = 1 - Math.pow(1-p, 3);
+          el.textContent = Math.floor(parsed.num * eased) + parsed.suffix;
+          if (p < 1) requestAnimationFrame(tick);
+          else el.textContent = parsed.num + parsed.suffix;
+        };
+        requestAnimationFrame(tick);
+      });
+    }, {threshold:.8});
+    stats.forEach(s => statObserver.observe(s));
+  });
+})();
+</script>
+
+</body>
+
+</html>
